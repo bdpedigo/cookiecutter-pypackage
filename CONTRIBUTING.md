@@ -9,13 +9,13 @@ You can contribute in many ways:
 
 ### Report Bugs
 
-Report bugs at https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}/issues.
+Report bugs at https://github.com//neuropull/issues.
 
 If you are reporting a bug, please include:
 
-- Your operating system name and version.
-- Any details about your local setup that might be helpful in troubleshooting.
-- Detailed steps to reproduce the bug.
+* Your operating system name and version.
+* Any details about your local setup that might be helpful in troubleshooting.
+* Detailed steps to reproduce the bug.
 
 ### Fix Bugs
 
@@ -29,61 +29,61 @@ and "help wanted" is open to whoever wants to implement it.
 
 ### Write Documentation
 
-{{ cookiecutter.project_name }} could always use more documentation, whether as part of the
-official {{ cookiecutter.project_name }} docs, in docstrings, or even on the web in blog posts,
+neuropull could always use more documentation, whether as part of the
+official neuropull docs, in docstrings, or even on the web in blog posts,
 articles, and such.
 
 ### Submit Feedback
 
-The best way to send feedback is to file an issue at https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}/issues.
+The best way to send feedback is to file an issue at https://github.com/neurodata/neuropull/issues.
 
 If you are proposing a feature:
 
-- Explain in detail how it would work.
-- Keep the scope as narrow as possible, to make it easier to implement.
-- Remember that this is a volunteer-driven project, and that contributions
-  are welcome.
+* Explain in detail how it would work.
+* Keep the scope as narrow as possible, to make it easier to implement.
+* Remember that this is a volunteer-driven project, and that contributions
+  are welcome :)
 
 ## Get Started!
 
-Ready to contribute? Here's how to set up `{{ cookiecutter.project_slug }}` for local development.
+Ready to contribute? Here's how to set up `neuropull` for local development.
 
-1. Fork the `{{ cookiecutter.project_slug }}` repo on GitHub.
+1. Fork the `neuropull` repo on GitHub.
 2. Clone your fork locally
 
-   ```
-   $ git clone git@github.com:your_name_here/{{ cookiecutter.project_slug }}.git
-   ```
+    ```
+    $ git clone git@github.com:your_name_here/neuropull.git
+    ```
 
 3. Ensure [poetry](https://python-poetry.org/docs/) is installed.
 4. Install dependencies and start your virtualenv:
 
-   ```
-   $ poetry install -E test -E doc -E dev
-   ```
+    ```
+    $ poetry install -E test -E doc -E dev
+    ```
 
 5. Create a branch for local development:
 
-   ```
-   $ git checkout -b name-of-your-bugfix-or-feature
-   ```
+    ```
+    $ git checkout -b name-of-your-bugfix-or-feature
+    ```
 
-   Now you can make your changes locally.
+    Now you can make your changes locally.
 
 6. When you're done making changes, check that your changes pass the
    tests, including testing other Python versions, with tox:
 
-   ```
-   $ poetry run tox
-   ```
+    ```
+    $ poetry run tox
+    ```
 
 7. Commit your changes and push your branch to GitHub:
 
-   ```
-   $ git add .
-   $ git commit -m "Your detailed description of your changes."
-   $ git push origin name-of-your-bugfix-or-feature
-   ```
+    ```
+    $ git add .
+    $ git commit -m "Your detailed description of your changes."
+    $ git push origin name-of-your-bugfix-or-feature
+    ```
 
 8. Submit a pull request through the GitHub website.
 
@@ -95,16 +95,18 @@ Before you submit a pull request, check that it meets these guidelines:
 2. If the pull request adds functionality, the docs should be updated. Put
    your new functionality into a function with a docstring, and add the
    feature to the list in README.md.
-3. Check https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}/actions
+3. The pull request should work for Python 3.6, 3.7, 3.8 and 3.9. Check
+   https://github.com/neurodata/neuropull/actions
    and make sure that the tests pass for all supported Python versions.
 
 ## Tips
 
 ```
-$ poetry run pytest tests/test_{{ cookiecutter.pkg_name }}.py
+$ poetry run pytest tests/test_neuropull.py
 ```
 
 To run a subset of tests.
+
 
 ## Deploying
 

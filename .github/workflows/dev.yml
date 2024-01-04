@@ -52,6 +52,8 @@ jobs:
       - name: Install dependencies
         run: poetry install --with dev
 
-      - name: Run cookiecutter
-        run: cookiecutter --no-input --overwrite-if-exists --config-file .
+      - name: Find cookiecutter
+        run: poetry run which cookiecutter
 
+      - name: Run cookiecutter
+        run: poetry run cookiecutter --no-input --overwrite-if-exists --config-file .

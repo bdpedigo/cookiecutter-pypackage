@@ -4,20 +4,16 @@ sources = {{ cookiecutter.pkg_name }}
 test: format lint unittest
 
 format:
-	isort $(sources) tests
-	black $(sources) tests
+	ruff format $(sources) tests
 
 lint:
-	flake8 $(sources) tests
+	ruff check $(sources) tests
 	{%- if cookiecutter.use_mypy == 'y' %}
 	mypy $(sources) tests
 	{%- endif %}
 
 unittest:
 	pytest
-
-coverage:
-	pytest --cov=$(sources) --cov-branch --cov-report=term-missing tests
 
 pre-commit:
 	pre-commit run --all-files

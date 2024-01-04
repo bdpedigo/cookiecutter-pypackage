@@ -1,12 +1,8 @@
 # Cookiecutter PyPackage
 
-Cookiecutter template for a Python package, built with popular develop tools and
-conform to best practice.
+Cookiecutter template for a Python package, built with popular develop tools and conform to best practice.
 
-[![CI Status](https://github.com/waynerv/cookiecutter-pypackage/actions/workflows/dev.yml/badge.svg)](https://github.com/waynerv/cookiecutter-pypackage/actions/workflows/dev.yml)
-[![License](https://img.shields.io/pypi/l/ppw)](https://opensource.org/licenses/BSD-2-Clause)
-
-- Documentation: <https://waynerv.github.io/cookiecutter-pypackage>
+- Documentation: <https://bdpedigo.github.io/cookiecutter-pypackage>
 
 ## Features
 
@@ -43,6 +39,6 @@ cookiecutter https://github.com/bdpedigo/cookiecutter-pypackage.git
 
 Then follow **[Tutorial](docs/tutorial.md)** to finish other configurations.
 
-# Credits
+## Credits
 
-This repo is forked from [zillionare/python-project-wizard](https://github.com/zillionare/python-project-wizard), which originally forked from [audreyfeldroy/cookiecutter-pypackage](https://github.com/audreyfeldroy/cookiecutter-pypackage)
+This repo is forked from [waynerv/cookiecutter-pypackage](https://github.com/waynerv/cookiecutter-pypackage), which forked from [zillionare/python-project-wizard](https://github.com/zillionare/python-project-wizard), which forked from [audreyfeldroy/cookiecutter-pypackage](https://github.com/audreyfeldroy/cookiecutter-pypackage).

@@ -52,9 +52,6 @@ jobs:
       - name: Install dependencies
         run: poetry install --with dev
 
-      - name: Find tox
-        run: poetry run tox --version
+      - name: Run cookiecutter
+        run: cookiecutter --no-input --overwrite-if-exists --config-file .
 
-      # tox handles the logic for what tests etc. to run. See tox.ini for details.
-      - name: Run tox (includes tests, format, lint, docs)
-        run: poetry run tox --current-env

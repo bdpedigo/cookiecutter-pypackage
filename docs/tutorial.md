@@ -1,7 +1,7 @@
 # Tutorial
 
 ??? Note
-    Did you find this article confusing? [Edit this file] and pull a request!
+Did you find this article confusing? [Edit this file] and pull a request!
 
 To start with, you will need [GitHub], [PyPI], [TestPyPI] and [Codecov] account. If
 you don't have one, please follow the links to apply one before you get started on this
@@ -14,7 +14,7 @@ some tutorials at the top of the page at [GitHub Help].
 
 Install cookiecutter:
 
-``` bash
+```bash
 pip install cookiecutter
 ```
 
@@ -89,20 +89,20 @@ This is the recommended way of installing poetry.
 ## Step 4: Install Dev Requirements
 
 You should still be in the folder named as `project_slug`, which containing the
- `pyproject.toml` file.
+`pyproject.toml` file.
 
 Install the new project's local development requirements with `poetry install`:
 
-``` bash
-poetry install -E doc -E dev -E test
+```bash
+poetry install --with dev
 poetry run tox
 ```
 
 Poetry will create its own virtualenv isolated from your system and install the dependencies in it.
-We installed extra dependency need by developer with `-E {group}` options, such as documentation build tools, lint,
+We installed extra dependency need by developer with the `--with dev` option, such as documentation build tools, lint,
 formatting and test tools etc.
 
-We also launch a smoke test here by running `poetry run tox`. This will run `tox` within created virtual environment,
+We also launch a test here by running `poetry run tox`. This will run `tox` within created virtual environment,
 give you a test report and lint report. You should see no errors except some lint warnings.
 
 You can also activate the virtual environment manually with `poetry shell`, this will create a new shell.
@@ -128,7 +128,26 @@ You can also activate the virtual environment manually with `poetry shell`, this
 
 ## Step 5: Create a GitHub Repo
 
-Go to your GitHub account and create a new repo named `my-package`, where
+Create a [new GitHub repo](https://github.com/new). Do not initialize with a README or
+any other files.
+
+Follow the instructions there for uploading your existing repo from the command line. It
+should look something like this (where { owner name } is your GitHub username and { repo name } is the name of your repo):
+
+```
+git init
+git add .
+git commit -m "initial commit"
+git branch -M main
+git remote add origin https://github.com/{ owner name }/{ repo name }.git
+git push -u origin main
+```
+
+### Add permissions 
+
+settings -> actions -> workflow permissions -> read and write permissions 
+
+<!-- Go to your GitHub account and create a new repo named `my-package`, where
 `my-package` matches the `project_slug` from your answers to running
 cookiecutter.
 
@@ -137,26 +156,7 @@ Then go to repo > settings > secrets, click on 'New repository secret', add the 
 
 - TEST_PYPI_API_TOKEN, see [How to apply TestPyPI token]
 - PYPI_API_TOKEN, see [How to apply pypi token]
-- PERSONAL_TOKEN, see [How to apply personal token]
-
-## Step 6: Set Up codecov integration
-
-???+ Tips
-
-    If you have already setup codecov integration and configured access for all your
-    repositories, you can skip this step.
-
-In your browser, visit [install codecov app], you'll be landed at this page:
-
-![](http://images.jieyu.ai/images/202104/20210419175222.png)
-
-Click on the green `install` button at top right, choose `all repositories` then click
-on `install` button, following directions until all set.
-
-If the repo you created is a private repo, you need to set the following additional secrets,
-which is not required for public repos:
-
-- CODECOV_TOKEN, see [Codecov GitHub Action - Usage](https://github.com/marketplace/actions/codecov?version=v1.5.2#usage)
+- PERSONAL_TOKEN, see [How to apply personal token] -->
 
 ## Step 7: Upload code to GitHub
 
@@ -164,7 +164,7 @@ Back to your develop environment, find the folder named after the `project_slug`
 Move into this folder, and then setup git to use your GitHub repo and upload the
 code:
 
-``` bash
+```bash
 cd my-package
 
 git add .
@@ -198,7 +198,7 @@ new artifact is published under the name `project_slug`.
 
 ## Step 8. Check documentation
 
-Documentation will be published and available at *https://{your_github_account}.github.io/{your_repo}* once:
+Documentation will be published and available at _https://{your_github_account}.github.io/{your_repo}_ once:
 
 1. the commit is tagged, and the tag name is started with 'v' (lower case)
 2. build/testing executed by GitHub CI passed
@@ -213,10 +213,9 @@ This will run the builtin development server for you to preview.
 
 ## Step 9. Make official release
 
-  After done with your phased development in a feature branch, make a pull request, following
-  instructions at [release checklist](pypi_release_checklist.md), trigger first official release and check
-  result at [PyPI].
-
+After done with your phased development in a feature branch, make a pull request, following
+instructions at [release checklist](pypi_release_checklist.md), trigger first official release and check
+result at [PyPI].
 
 [Edit this file]: https://github.com/waynerv/cookiecutter-pypackage/blob/master/docs/tutorial.md
 [Codecov]: https://codecov.io/

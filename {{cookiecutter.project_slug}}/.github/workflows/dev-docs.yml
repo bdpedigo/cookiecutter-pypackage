@@ -1,34 +1,33 @@
-name: dev checks
+name: dev docs
 
 on:
-  # Triggers the workflow on push or pull request events but only for the main branch
-  push:
-    branches: [main]
-  pull_request:
-    branches: [main]
+  # run this workflow when dev checks pass
+  workflow_run:
+    workflows: ["dev checks"]
+    types:
+      - completed
+
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
-  # Allows other workflows to trigger this workflow
-  workflow_call:
-    inputs:
-      deploy-dev-docs:
-        description: "Deploy the docs as dev version to the site"
-        type: boolean
-        required: false
-        default: true
 
 jobs:
-  test:
-    name: Run tests and auto checks on code
+  # This workflow contains a single job called "docs"
+  docs:
+    name: Build and deploy (dev) docs
+
     strategy:
       matrix:
-        python-version: ["3.11", "3.12"]
-        os: [ubuntu-latest, macos-latest, windows-latest]
+        os: [ubuntu-latest]
+        python-version: ["3.11"]
+
     runs-on: ${{ matrix.os }}
 
     steps:
       - name: Get repo
         uses: actions/checkout@v4
+
+      - name: Get gh-pages branch
+        run: git fetch origin gh-pages --depth=1
 
       - name: Setup Python
         uses: actions/setup-python@v5
@@ -52,9 +51,12 @@ jobs:
       - name: Install dependencies
         run: poetry install --with dev
 
-      - name: Find tox
-        run: poetry run tox --version
+      - name: Configure git for github-actions[bot]
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
 
-      # tox handles the logic for what tests etc. to run. See tox.ini for details.
-      - name: Run tox (includes tests, format, lint, docs)
-        run: poetry run tox --current-env
+      - name: Build and push versioned docs with mike
+        run: |
+          poetry run mike deploy --push --update-aliases dev
+          poetry run mike set-default stable --push

@@ -38,14 +38,14 @@ some tutorials at the top of the page at [GitHub Help].
 Currently, since Cookiecutter is itself a python package with its own dependencies,
 it is recommended to use [`pipx`](https://github.com/pypa/pipx) to do so:
 
-```console
+```bash
 pipx install cookiecutter
 ```
 
 This should enable you to run `cookiecutter` from the command line. To generate a Python
 package project using this template, run the following command and follow the prompts:
 
-```console
+```bash
 cookiecutter https://github.com/bdpedigo/cookiecutter-pypackage.git
 ```
 
@@ -64,7 +64,7 @@ provided to `project_slug`.
 
 Go to this generated folder, the project layout should look like:
 
-```
+```console
 .
 ├── .bumpversion.cfg
 ├── .editorconfig
@@ -121,22 +121,57 @@ This is the recommended way of installing poetry.
 
 ### Install developer requirements
 
-You should still be in the folder named as `project_slug`, which containing the
+You should still be in the folder named `project_slug`, which contains the
 `pyproject.toml` file.
 
-Install the new project's local development requirements with `poetry install`:
+It is a good idea to make a new virtual environment, although Poetry will also do this
+automatically for you in the next step. If you would like to do this manually, you can
+use the following command:
+
+```bash
+poetry env use <path to Python interpreter>
+```
+
+For instance, to use the Python 3.11 interpreter linked to the alias `python3.11`,
+you would run:
+
+```bash
+poetry env use python3.11
+```
+
+By default, this will create a virtual environment in the `.venv` folder in your project
+directory. To activate this virtual environment, run:
+
+```bash
+source .venv/bin/activate
+```
+
+or
+
+```bash
+poetry shell
+```
+
+With the environment active, install the new project's local development requirements
+with `poetry install`:
 
 ```bash
 poetry install --with dev
-poetry run tox
 ```
 
 Poetry will create its own virtualenv isolated from your system and install the dependencies in it.
-We installed extra dependency need by developer with the `--with dev` option, such as documentation build tools, lint,
-formatting and test tools etc.
+We installed extra dependency needed by developers with the `--with dev` option, such as
+documentation build tools, linting, formatting and test tools etc.
 
-We also launch a test here by running `poetry run tox`. This will run `tox` within created virtual environment,
-give you a test report and lint report. You should see no errors except some lint warnings.
+### Run tests
+
+We also launch a test here by running `poetry run tox`. This will run `tox` within
+created virtual environment, give you a test report and lint report. You should see no
+errors except some lint warnings.
+
+```bash
+poetry run tox
+```
 
 If you found errors like the following during tox run:
 

@@ -11,10 +11,6 @@
         <link rel="canonical" href="https://bdpedigo.github.io/cookiecutter-pypackage/dev/tutorial/">
       
       
-        <link rel="prev" href="..">
-      
-      
-        <link rel="next" href="../console_script_setup/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -242,184 +238,11 @@
         
   
   <span class="md-ellipsis">
-    Introduction
+    Usage
   </span>
   
 
       </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-    
-  
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Tutorial
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
-        
-  
-  <span class="md-ellipsis">
-    Tutorial
-  </span>
-  
-
-      </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#tutorial" class="md-nav__link">
-    <span class="md-ellipsis">
-      Tutorial
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Tutorial">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#step-1-install-cookiecutter" class="md-nav__link">
-    <span class="md-ellipsis">
-      Step 1: Install Cookiecutter
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#step-2-generate-your-package" class="md-nav__link">
-    <span class="md-ellipsis">
-      Step 2: Generate Your Package
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#step-3-install-poetry" class="md-nav__link">
-    <span class="md-ellipsis">
-      Step 3: Install Poetry
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#step-4-install-dev-requirements" class="md-nav__link">
-    <span class="md-ellipsis">
-      Step 4: Install Dev Requirements
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#step-5-create-a-github-repo" class="md-nav__link">
-    <span class="md-ellipsis">
-      Step 5: Create a GitHub Repo
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Step 5: Create a GitHub Repo">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#add-permissions" class="md-nav__link">
-    <span class="md-ellipsis">
-      Add permissions
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#step-7-upload-code-to-github" class="md-nav__link">
-    <span class="md-ellipsis">
-      Step 7: Upload code to GitHub
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Step 7: Upload code to GitHub">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#check-result" class="md-nav__link">
-    <span class="md-ellipsis">
-      Check result
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#step-8-check-documentation" class="md-nav__link">
-    <span class="md-ellipsis">
-      Step 8. Check documentation
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#step-9-make-official-release" class="md-nav__link">
-    <span class="md-ellipsis">
-      Step 9. Make official release
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -679,11 +502,7 @@
   <h1>Tutorial</h1>
 
 <h2 id="tutorial">Tutorial<a class="headerlink" href="#tutorial" title="Permanent link">&para;</a></h2>
-<details class="note">
-<summary>Note</summary>
-</details>
-<p>Did you find this article confusing? <a href="https://github.com/waynerv/cookiecutter-pypackage/blob/master/docs/tutorial.md">Edit this file</a> and pull a request!</p>
-<p>To start with, you will need <a href="https://github.com/">GitHub</a>, <a href="https://pypi.org">PyPI</a>, <a href="https://test.pypi.org/">TestPyPI</a> and <a href="https://codecov.io/">Codecov</a> account. If
+<p>To start with, you will need <a href="https://github.com/">GitHub</a>, <a href="https://pypi.org">PyPI</a>, and <a href="https://test.pypi.org/">TestPyPI</a> accounts. If
 you don't have one, please follow the links to apply one before you get started on this
 tutorial.</p>
 <p>If you are new to Git and GitHub, you should probably spend a few minutes on
@@ -695,7 +514,7 @@ some tutorials at the top of the page at <a href="https://help.github.com/">GitH
 <h3 id="step-2-generate-your-package">Step 2: Generate Your Package<a class="headerlink" href="#step-2-generate-your-package" title="Permanent link">&para;</a></h3>
 <p>Now it's time to generate your Python package.</p>
 <p>Run the following command and feed with answers, If you don’t know what to enter, stick with the defaults:</p>
-<div class="highlight"><pre><span></span><code>cookiecutter<span class="w"> </span>https://github.com/waynerv/cookiecutter-pypackage.git
+<div class="highlight"><pre><span></span><code>cookiecutter<span class="w"> </span>https://github.com/bdpedigo/cookiecutter-pypackage.git
 </code></pre></div>
 <p>Finally, a new folder will be created under current folder, the name is the answer you
 provided to <code>project_slug</code>.</p>
@@ -737,8 +556,10 @@ provided to <code>project_slug</code>.</p>
 <p>Here the project_slug is <code>my-package</code>, when you generate yours, it could be other name.</p>
 <p>Also be noticed that there's <code>pyproject.toml</code> in this folder. This is the main configuration file of our project.</p>
 <h3 id="step-3-install-poetry">Step 3: Install Poetry<a class="headerlink" href="#step-3-install-poetry" title="Permanent link">&para;</a></h3>
-<p>In this step we will install Poetry if you are not using it, since the whole project is managed by it.</p>
-<div class="highlight"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>poetry
+<p>Next, install <a href="https://python-poetry.org/">Poetry</a> if you haven't already. I recommend
+installing according to their most recent <a href="https://python-poetry.org/docs/#installation">instructions</a>.
+As of this writing, the recommended way to install Poetry is with [pipx](</p>
+<div class="highlight"><pre><span></span><code>pipx<span class="w"> </span>install<span class="w"> </span>poetry
 </code></pre></div>
 <p>In addition, Poetry provides a <a href="https://python-poetry.org/docs/#installation">custom installer</a> that will install
 poetry isolated from the rest of your system by vendorizing its dependencies.
@@ -786,7 +607,7 @@ git remote add origin https://github.com/{ owner name }/{ repo name }.git
 git push -u origin main
 </code></pre></div>
 <h4 id="add-permissions">Add permissions<a class="headerlink" href="#add-permissions" title="Permanent link">&para;</a></h4>
-<p>settings -&gt; actions -&gt; workflow permissions -&gt; read and write permissions </p>
+<p>settings -&gt; actions -&gt; workflow permissions -&gt; read and write permissions</p>
 <!-- Go to your GitHub account and create a new repo named `my-package`, where
 `my-package` matches the `project_slug` from your answers to running
 cookiecutter.

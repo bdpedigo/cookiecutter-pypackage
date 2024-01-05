@@ -12,7 +12,7 @@
       
       
       
-        <link rel="next" href="tutorial/">
+        <link rel="next" href="console_script_setup/">
       
       
       <link rel="icon" href="assets/images/favicon.png">
@@ -112,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Introduction
+              Usage
             
           </span>
         </div>
@@ -247,7 +247,7 @@
           
   
   <span class="md-ellipsis">
-    Introduction
+    Usage
   </span>
   
 
@@ -258,7 +258,7 @@
         
   
   <span class="md-ellipsis">
-    Introduction
+    Usage
   </span>
   
 
@@ -303,23 +303,83 @@
     </span>
   </a>
   
-</li>
+    <nav class="md-nav" aria-label="Quickstart">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#creating-a-github-pages-branch-for-the-first-time" class="md-nav__link">
+  <a href="#cookiecutter-installation" class="md-nav__link">
     <span class="md-ellipsis">
-      Creating a GitHub Pages branch for the first time
+      Cookiecutter installation
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#credits" class="md-nav__link">
+  <a href="#generate-your-package" class="md-nav__link">
     <span class="md-ellipsis">
-      Credits
+      Generate your package
     </span>
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#install-poetry" class="md-nav__link">
+    <span class="md-ellipsis">
+      Install Poetry
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#install-developer-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Install developer requirements
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-a-github-repo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create a GitHub repo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#change-github-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      Change GitHub settings
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#initialize-documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Initialize documentation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set-up-publishing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Set up publishing
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -332,26 +392,6 @@
   
 </nav>
       
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="tutorial/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Tutorial
-  </span>
-  
-
-      </a>
     </li>
   
 
@@ -486,23 +526,83 @@
     </span>
   </a>
   
-</li>
+    <nav class="md-nav" aria-label="Quickstart">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#creating-a-github-pages-branch-for-the-first-time" class="md-nav__link">
+  <a href="#cookiecutter-installation" class="md-nav__link">
     <span class="md-ellipsis">
-      Creating a GitHub Pages branch for the first time
+      Cookiecutter installation
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#credits" class="md-nav__link">
+  <a href="#generate-your-package" class="md-nav__link">
     <span class="md-ellipsis">
-      Credits
+      Generate your package
     </span>
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#install-poetry" class="md-nav__link">
+    <span class="md-ellipsis">
+      Install Poetry
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#install-developer-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Install developer requirements
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-a-github-repo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create a GitHub repo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#change-github-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      Change GitHub settings
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#initialize-documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Initialize documentation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set-up-publishing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Set up publishing
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -542,14 +642,12 @@
   
 
 
-  <h1>Introduction</h1>
+  <h1>Usage</h1>
 
 <!-- BEGIN INCLUDE ../README.md -->
 <h2 id="cookiecutter-pypackage">Cookiecutter PyPackage<a class="headerlink" href="#cookiecutter-pypackage" title="Permanent link">&para;</a></h2>
-<p>Cookiecutter template for a Python package, built with popular develop tools and conform to best practice.</p>
-<ul>
-<li>Documentation: <a href="https://bdpedigo.github.io/cookiecutter-pypackage">https://bdpedigo.github.io/cookiecutter-pypackage</a></li>
-</ul>
+<p>Cookiecutter template for a Python package</p>
+<p>Documentation: <a href="https://bdpedigo.github.io/cookiecutter-pypackage">https://bdpedigo.github.io/cookiecutter-pypackage</a></p>
 <h3 id="features">Features<a class="headerlink" href="#features" title="Permanent link">&para;</a></h3>
 <p>This tool will create Python project with the following features:</p>
 <ul>
@@ -569,18 +667,113 @@
 <li>daily test runs to catch dependency update and CI failure</li>
 </ul>
 <h3 id="quickstart">Quickstart<a class="headerlink" href="#quickstart" title="Permanent link">&para;</a></h3>
-<p>Install the latest Cookiecutter if you haven't installed it yet (this requires Cookiecutter 1.4.0 or higher):</p>
-<div class="highlight"><pre><span></span><code>pip install -U cookiecutter
+<p>To start, you will need [GitHub], [PyPI], and [TestPyPI] accounts. If
+you don't have one, please follow the links to apply one before you get started on this
+tutorial.</p>
+<p>If you are new to Git and GitHub, you should probably spend a few minutes on
+some tutorials at the top of the page at [GitHub Help].</p>
+<h4 id="cookiecutter-installation">Cookiecutter installation<a class="headerlink" href="#cookiecutter-installation" title="Permanent link">&para;</a></h4>
+<p><a href="https://github.com/cookiecutter/cookiecutter?tab=readme-ov-file#installation">Install Cookiecutter</a> if you haven't installed it yet (this requires Cookiecutter 1.4.0 or higher).
+Currently, since Cookiecutter is itself a python package with its own dependencies,
+it is recommended to use <a href="https://github.com/pypa/pipx"><code>pipx</code></a> to do so:</p>
+<div class="highlight"><pre><span></span><code><span class="go">pipx install cookiecutter</span>
 </code></pre></div>
-<p>Generate a Python package project:</p>
-<div class="highlight"><pre><span></span><code>cookiecutter https://github.com/bdpedigo/cookiecutter-pypackage.git
+<p>This should enable you to run <code>cookiecutter</code> from the command line. To generate a Python
+package project using this template, run the following command and follow the prompts:</p>
+<div class="highlight"><pre><span></span><code><span class="go">cookiecutter https://github.com/bdpedigo/cookiecutter-pypackage.git</span>
 </code></pre></div>
-<p>Then follow <strong><a href="tutorial/">Tutorial</a></strong> to finish other configurations.</p>
-<h3 id="creating-a-github-pages-branch-for-the-first-time">Creating a GitHub Pages branch for the first time<a class="headerlink" href="#creating-a-github-pages-branch-for-the-first-time" title="Permanent link">&para;</a></h3>
+<h4 id="generate-your-package">Generate your package<a class="headerlink" href="#generate-your-package" title="Permanent link">&para;</a></h4>
+<p>Now it's time to generate your Python package.</p>
+<p>Run the following command and feed with answers, If you don’t know what to enter, stick with the defaults:</p>
+<div class="highlight"><pre><span></span><code>cookiecutter<span class="w"> </span>https://github.com/bdpedigo/cookiecutter-pypackage.git
+</code></pre></div>
+<p>Finally, a new folder will be created under current folder, the name is the answer you
+provided to <code>project_slug</code>.</p>
+<p>Go to this generated folder, the project layout should look like:</p>
+<div class="highlight"><pre><span></span><code>.
+├── .bumpversion.cfg
+├── .editorconfig
+├── .github
+│   ├── ISSUE_TEMPLATE.md
+│   └── workflows
+│       ├── dev.yml
+│       ├── preview.yml
+│       └── release.yml
+├── .gitignore
+├── .pre-commit-config.yaml
+├── CHANGELOG.md
+├── CONTRIBUTING.md
+├── LICENSE
+├── README.md
+├── docs
+│   ├── api.md
+│   ├── changelog.md
+│   ├── contributing.md
+│   ├── index.md
+│   ├── installation.md
+│   └── usage.md
+├── makefile
+├── mkdocs.yml
+├── my_package
+│   ├── __init__.py
+│   ├── cli.py
+│   └── my_package.py
+├── pyproject.toml
+├── setup.cfg
+└── tests
+    ├── __init__.py
+    └── test_my_package.py
+</code></pre></div>
+<p>Here the project_slug is <code>my-package</code>, when you generate yours, it could be other name.</p>
+<p>Also be noticed that there's <code>pyproject.toml</code> in this folder. This is the main configuration file of our project.</p>
+<h4 id="install-poetry">Install Poetry<a class="headerlink" href="#install-poetry" title="Permanent link">&para;</a></h4>
+<p>Next, install <a href="https://python-poetry.org/">Poetry</a> if you haven't already. I recommend
+installing according to their most recent <a href="https://python-poetry.org/docs/#installation">instructions</a>.
+As of this writing, the recommended way to install Poetry is with [pipx](</p>
+<div class="highlight"><pre><span></span><code>pipx<span class="w"> </span>install<span class="w"> </span>poetry
+</code></pre></div>
+<p>In addition, Poetry provides a <a href="https://python-poetry.org/docs/#installation">custom installer</a> that will install
+poetry isolated from the rest of your system by vendorizing its dependencies.
+This is the recommended way of installing poetry.</p>
+<h4 id="install-developer-requirements">Install developer requirements<a class="headerlink" href="#install-developer-requirements" title="Permanent link">&para;</a></h4>
+<p>You should still be in the folder named as <code>project_slug</code>, which containing the
+<code>pyproject.toml</code> file.</p>
+<p>Install the new project's local development requirements with <code>poetry install</code>:</p>
+<div class="highlight"><pre><span></span><code>poetry<span class="w"> </span>install<span class="w"> </span>--with<span class="w"> </span>dev
+poetry<span class="w"> </span>run<span class="w"> </span>tox
+</code></pre></div>
+<p>Poetry will create its own virtualenv isolated from your system and install the dependencies in it.
+We installed extra dependency need by developer with the <code>--with dev</code> option, such as documentation build tools, lint,
+formatting and test tools etc.</p>
+<p>We also launch a test here by running <code>poetry run tox</code>. This will run <code>tox</code> within created virtual environment,
+give you a test report and lint report. You should see no errors except some lint warnings.</p>
+<p>If you found errors like the following during tox run:</p>
+<div class="highlight"><pre><span></span><code>ERROR: InterpreterNotFound: python3.9
+</code></pre></div>
+<p>don't be panic, this is just because python3.x is not found on your machine. If you
+decide to support that version of Python in your package, please install it on your
+machine. Otherwise, remove it from tox.ini and pyproject.toml (search python3.x then
+remove it).</p>
+<h4 id="create-a-github-repo">Create a GitHub repo<a class="headerlink" href="#create-a-github-repo" title="Permanent link">&para;</a></h4>
+<p>Create a <a href="https://github.com/new">new GitHub repo</a>. Do not initialize with a README or
+any other files.</p>
+<p>Follow the instructions there for uploading your existing repo from the command line. It
+should look something like this (where { owner name } is your GitHub username and { repo name } is the name of your repo):</p>
+<div class="highlight"><pre><span></span><code>git init
+git add .
+git commit -m &quot;initial commit&quot;
+git branch -M main
+git remote add origin https://github.com/{ owner name }/{ repo name }.git
+git push -u origin main
+</code></pre></div>
+<h4 id="change-github-settings">Change GitHub settings<a class="headerlink" href="#change-github-settings" title="Permanent link">&para;</a></h4>
+<p>On GitHub, go to your new repo and click on the "Settings" tab. Then click on "Actions" in the left sidebar.
+Under "Workflow permissions", check the box for "Read and write permissions".</p>
+<h4 id="initialize-documentation">Initialize documentation<a class="headerlink" href="#initialize-documentation" title="Permanent link">&para;</a></h4>
 <div class="highlight"><pre><span></span><code>mike deploy --push --update-aliases dev
 </code></pre></div>
-<h3 id="credits">Credits<a class="headerlink" href="#credits" title="Permanent link">&para;</a></h3>
-<p>This repo is forked from <a href="https://github.com/waynerv/cookiecutter-pypackage">waynerv/cookiecutter-pypackage</a>, which forked from <a href="https://github.com/zillionare/python-project-wizard">zillionare/python-project-wizard</a>, which forked from <a href="https://github.com/audreyfeldroy/cookiecutter-pypackage">audreyfeldroy/cookiecutter-pypackage</a>.</p>
+<h4 id="set-up-publishing">Set up publishing<a class="headerlink" href="#set-up-publishing" title="Permanent link">&para;</a></h4>
+<p>TODO: add instructions for setting up PyPI and TestPyPI</p>
 <!-- END INCLUDE -->
 
 

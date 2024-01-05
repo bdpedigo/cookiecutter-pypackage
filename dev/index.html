@@ -551,17 +551,7 @@
 </code></pre></div></td></tr></table></div>
 <p>Then follow <strong><a href="tutorial/">Tutorial</a></strong> to finish other configurations.</p>
 <h3 id="creating-a-github-pages-branch-for-the-first-time">Creating a GitHub Pages branch for the first time<a class="headerlink" href="#creating-a-github-pages-branch-for-the-first-time" title="Permanent link">&para;</a></h3>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code>git switch --orphan gh-pages
-touch versions.json
-echo &quot;[]&quot; &gt;&gt; versions.json
-git add versions.json
-git commit -m &quot;Initial commit&quot;
-git push --set-upstream origin gh-pages
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>mike deploy --push --update-aliases dev
 </code></pre></div></td></tr></table></div>
 <h3 id="credits">Credits<a class="headerlink" href="#credits" title="Permanent link">&para;</a></h3>
 <p>This repo is forked from <a href="https://github.com/waynerv/cookiecutter-pypackage">waynerv/cookiecutter-pypackage</a>, which forked from <a href="https://github.com/zillionare/python-project-wizard">zillionare/python-project-wizard</a>, which forked from <a href="https://github.com/audreyfeldroy/cookiecutter-pypackage">audreyfeldroy/cookiecutter-pypackage</a>.</p>

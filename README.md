@@ -39,6 +39,16 @@ cookiecutter https://github.com/bdpedigo/cookiecutter-pypackage.git
 
 Then follow **[Tutorial](docs/tutorial.md)** to finish other configurations.
 
+## Creating a GitHub Pages branch for the first time 
+```
+git switch --orphan gh-pages
+touch versions.json
+echo "[]" >> versions.json
+git add versions.json
+git commit -m "Initial commit"
+git push --set-upstream origin gh-pages
+```
+
 ## Credits
 
 This repo is forked from [waynerv/cookiecutter-pypackage](https://github.com/waynerv/cookiecutter-pypackage), which forked from [zillionare/python-project-wizard](https://github.com/zillionare/python-project-wizard), which forked from [audreyfeldroy/cookiecutter-pypackage](https://github.com/audreyfeldroy/cookiecutter-pypackage).

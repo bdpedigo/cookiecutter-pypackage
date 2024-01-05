@@ -325,6 +325,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#create-a-github-repo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create a GitHub repo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#install-poetry" class="md-nav__link">
     <span class="md-ellipsis">
       Install Poetry
@@ -346,15 +355,6 @@
   <a href="#run-tests" class="md-nav__link">
     <span class="md-ellipsis">
       Run tests
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#create-a-github-repo" class="md-nav__link">
-    <span class="md-ellipsis">
-      Create a GitHub repo
     </span>
   </a>
   
@@ -557,6 +557,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#create-a-github-repo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create a GitHub repo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#install-poetry" class="md-nav__link">
     <span class="md-ellipsis">
       Install Poetry
@@ -578,15 +587,6 @@
   <a href="#run-tests" class="md-nav__link">
     <span class="md-ellipsis">
       Run tests
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#create-a-github-repo" class="md-nav__link">
-    <span class="md-ellipsis">
-      Create a GitHub repo
     </span>
   </a>
   
@@ -744,6 +744,18 @@ provided to <code>project_slug</code>.</p>
 </code></pre></div>
 <p>Here the project_slug is <code>my-package</code>, when you generate yours, it could be other name.</p>
 <p>Also be noticed that there's <code>pyproject.toml</code> in this folder. This is the main configuration file of our project.</p>
+<h4 id="create-a-github-repo">Create a GitHub repo<a class="headerlink" href="#create-a-github-repo" title="Permanent link">&para;</a></h4>
+<p>Create a <a href="https://github.com/new">new GitHub repo</a>. Do not initialize with a README or
+any other files.</p>
+<p>Follow the instructions there for uploading your existing repo from the command line. It
+should look something like this (where { owner name } is your GitHub username and { repo name } is the name of your repo):</p>
+<div class="highlight"><pre><span></span><code>git init
+git add .
+git commit -m &quot;initial commit&quot;
+git branch -M main
+git remote add origin https://github.com/{ owner name }/{ repo name }.git
+git push -u origin main
+</code></pre></div>
 <h4 id="install-poetry">Install Poetry<a class="headerlink" href="#install-poetry" title="Permanent link">&para;</a></h4>
 <p>Next, install <a href="https://python-poetry.org/">Poetry</a> if you haven't already. I recommend
 installing according to their most recent <a href="https://python-poetry.org/docs/#installation">instructions</a>.
@@ -792,18 +804,6 @@ errors except some lint warnings.</p>
 decide to support that version of Python in your package, please install it on your
 machine. Otherwise, remove it from tox.ini and pyproject.toml (search python3.x then
 remove it).</p>
-<h4 id="create-a-github-repo">Create a GitHub repo<a class="headerlink" href="#create-a-github-repo" title="Permanent link">&para;</a></h4>
-<p>Create a <a href="https://github.com/new">new GitHub repo</a>. Do not initialize with a README or
-any other files.</p>
-<p>Follow the instructions there for uploading your existing repo from the command line. It
-should look something like this (where { owner name } is your GitHub username and { repo name } is the name of your repo):</p>
-<div class="highlight"><pre><span></span><code>git init
-git add .
-git commit -m &quot;initial commit&quot;
-git branch -M main
-git remote add origin https://github.com/{ owner name }/{ repo name }.git
-git push -u origin main
-</code></pre></div>
 <h4 id="change-github-settings">Change GitHub settings<a class="headerlink" href="#change-github-settings" title="Permanent link">&para;</a></h4>
 <p>On GitHub, go to your new repo and click on the "Settings" tab. Then click on "Actions" in the left sidebar.
 Under "Workflow permissions", check the box for "Read and write permissions".</p>

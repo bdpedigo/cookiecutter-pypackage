@@ -1,9 +1,6 @@
 # Tutorial
 
-??? Note
-Did you find this article confusing? [Edit this file] and pull a request!
-
-To start with, you will need [GitHub], [PyPI], [TestPyPI] and [Codecov] account. If
+To start with, you will need [GitHub], [PyPI], and [TestPyPI] accounts. If
 you don't have one, please follow the links to apply one before you get started on this
 tutorial.
 
@@ -25,7 +22,7 @@ Now it's time to generate your Python package.
 Run the following command and feed with answers, If you don’t know what to enter, stick with the defaults:
 
 ```bash
-cookiecutter https://github.com/waynerv/cookiecutter-pypackage.git
+cookiecutter https://github.com/bdpedigo/cookiecutter-pypackage.git
 ```
 
 Finally, a new folder will be created under current folder, the name is the answer you
@@ -76,10 +73,12 @@ Also be noticed that there's `pyproject.toml` in this folder. This is the main c
 
 ## Step 3: Install Poetry
 
-In this step we will install Poetry if you are not using it, since the whole project is managed by it.
+Next, install [Poetry](https://python-poetry.org/) if you haven't already. I recommend
+installing according to their most recent [instructions](https://python-poetry.org/docs/#installation).
+As of this writing, the recommended way to install Poetry is with [pipx](
 
 ```bash
-pip install poetry
+pipx install poetry
 ```
 
 In addition, Poetry provides a [custom installer](https://python-poetry.org/docs/#installation) that will install
@@ -143,9 +142,9 @@ git remote add origin https://github.com/{ owner name }/{ repo name }.git
 git push -u origin main
 ```
 
-### Add permissions 
+### Add permissions
 
-settings -> actions -> workflow permissions -> read and write permissions 
+settings -> actions -> workflow permissions -> read and write permissions
 
 <!-- Go to your GitHub account and create a new repo named `my-package`, where
 `my-package` matches the `project_slug` from your answers to running

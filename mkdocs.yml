@@ -3,8 +3,8 @@ site_url: https://bdpedigo.github.io/cookiecutter-pypackage
 repo_url: https://github.com/bdpedigo/cookiecutter-pypackage
 repo_name: bdpedigo/cookiecutter-pypackage
 nav:
-  - Introduction: index.md
-  - Tutorial: tutorial.md
+  - Usage: index.md
+  # - Tutorial: tutorial.md
   - Console script: console_script_setup.md
   - Release checklist: pypi_release_checklist.md
   - FAQ: faq.md

@@ -105,6 +105,23 @@ Here the project_slug is `my-package`, when you generate yours, it could be othe
 
 Also be noticed that there's `pyproject.toml` in this folder. This is the main configuration file of our project.
 
+### Create a GitHub repo
+
+Create a [new GitHub repo](https://github.com/new). Do not initialize with a README or
+any other files.
+
+Follow the instructions there for uploading your existing repo from the command line. It
+should look something like this (where { owner name } is your GitHub username and { repo name } is the name of your repo):
+
+```
+git init
+git add .
+git commit -m "initial commit"
+git branch -M main
+git remote add origin https://github.com/{ owner name }/{ repo name }.git
+git push -u origin main
+```
+
 ### Install Poetry
 
 Next, install [Poetry](https://python-poetry.org/) if you haven't already. I recommend
@@ -183,23 +200,6 @@ don't be panic, this is just because python3.x is not found on your machine. If 
 decide to support that version of Python in your package, please install it on your
 machine. Otherwise, remove it from tox.ini and pyproject.toml (search python3.x then
 remove it).
-
-### Create a GitHub repo
-
-Create a [new GitHub repo](https://github.com/new). Do not initialize with a README or
-any other files.
-
-Follow the instructions there for uploading your existing repo from the command line. It
-should look something like this (where { owner name } is your GitHub username and { repo name } is the name of your repo):
-
-```
-git init
-git add .
-git commit -m "initial commit"
-git branch -M main
-git remote add origin https://github.com/{ owner name }/{ repo name }.git
-git push -u origin main
-```
 
 ### Change GitHub settings
 

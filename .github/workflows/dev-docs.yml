@@ -59,4 +59,4 @@ jobs:
       - name: Build and push versioned docs with mike
         run: |
           poetry run mike deploy --push --update-aliases dev
-          poetry run mike set-default stable --push
+          poetry run mike set-default dev --push

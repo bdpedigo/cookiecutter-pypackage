@@ -39,14 +39,10 @@ cookiecutter https://github.com/bdpedigo/cookiecutter-pypackage.git
 
 Then follow **[Tutorial](docs/tutorial.md)** to finish other configurations.
 
-## Creating a GitHub Pages branch for the first time 
+## Creating a GitHub Pages branch for the first time
+
 ```
-git switch --orphan gh-pages
-touch versions.json
-echo "[]" >> versions.json
-git add versions.json
-git commit -m "Initial commit"
-git push --set-upstream origin gh-pages
+mike deploy --push --update-aliases dev
 ```
 
 ## Credits

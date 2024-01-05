@@ -343,6 +343,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#run-tests" class="md-nav__link">
+    <span class="md-ellipsis">
+      Run tests
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#create-a-github-repo" class="md-nav__link">
     <span class="md-ellipsis">
       Create a GitHub repo
@@ -566,6 +575,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#run-tests" class="md-nav__link">
+    <span class="md-ellipsis">
+      Run tests
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#create-a-github-repo" class="md-nav__link">
     <span class="md-ellipsis">
       Create a GitHub repo
@@ -676,11 +694,11 @@ some tutorials at the top of the page at [GitHub Help].</p>
 <p><a href="https://github.com/cookiecutter/cookiecutter?tab=readme-ov-file#installation">Install Cookiecutter</a> if you haven't installed it yet (this requires Cookiecutter 1.4.0 or higher).
 Currently, since Cookiecutter is itself a python package with its own dependencies,
 it is recommended to use <a href="https://github.com/pypa/pipx"><code>pipx</code></a> to do so:</p>
-<div class="highlight"><pre><span></span><code><span class="go">pipx install cookiecutter</span>
+<div class="highlight"><pre><span></span><code>pipx<span class="w"> </span>install<span class="w"> </span>cookiecutter
 </code></pre></div>
 <p>This should enable you to run <code>cookiecutter</code> from the command line. To generate a Python
 package project using this template, run the following command and follow the prompts:</p>
-<div class="highlight"><pre><span></span><code><span class="go">cookiecutter https://github.com/bdpedigo/cookiecutter-pypackage.git</span>
+<div class="highlight"><pre><span></span><code>cookiecutter<span class="w"> </span>https://github.com/bdpedigo/cookiecutter-pypackage.git
 </code></pre></div>
 <h4 id="generate-your-package">Generate your package<a class="headerlink" href="#generate-your-package" title="Permanent link">&para;</a></h4>
 <p>Now it's time to generate your Python package.</p>
@@ -690,39 +708,39 @@ package project using this template, run the following command and follow the pr
 <p>Finally, a new folder will be created under current folder, the name is the answer you
 provided to <code>project_slug</code>.</p>
 <p>Go to this generated folder, the project layout should look like:</p>
-<div class="highlight"><pre><span></span><code>.
-├── .bumpversion.cfg
-├── .editorconfig
-├── .github
-│   ├── ISSUE_TEMPLATE.md
-│   └── workflows
-│       ├── dev.yml
-│       ├── preview.yml
-│       └── release.yml
-├── .gitignore
-├── .pre-commit-config.yaml
-├── CHANGELOG.md
-├── CONTRIBUTING.md
-├── LICENSE
-├── README.md
-├── docs
-│   ├── api.md
-│   ├── changelog.md
-│   ├── contributing.md
-│   ├── index.md
-│   ├── installation.md
-│   └── usage.md
-├── makefile
-├── mkdocs.yml
-├── my_package
-│   ├── __init__.py
-│   ├── cli.py
-│   └── my_package.py
-├── pyproject.toml
-├── setup.cfg
-└── tests
-    ├── __init__.py
-    └── test_my_package.py
+<div class="highlight"><pre><span></span><code><span class="go">.</span>
+<span class="go">├── .bumpversion.cfg</span>
+<span class="go">├── .editorconfig</span>
+<span class="go">├── .github</span>
+<span class="go">│   ├── ISSUE_TEMPLATE.md</span>
+<span class="go">│   └── workflows</span>
+<span class="go">│       ├── dev.yml</span>
+<span class="go">│       ├── preview.yml</span>
+<span class="go">│       └── release.yml</span>
+<span class="go">├── .gitignore</span>
+<span class="go">├── .pre-commit-config.yaml</span>
+<span class="go">├── CHANGELOG.md</span>
+<span class="go">├── CONTRIBUTING.md</span>
+<span class="go">├── LICENSE</span>
+<span class="go">├── README.md</span>
+<span class="go">├── docs</span>
+<span class="go">│   ├── api.md</span>
+<span class="go">│   ├── changelog.md</span>
+<span class="go">│   ├── contributing.md</span>
+<span class="go">│   ├── index.md</span>
+<span class="go">│   ├── installation.md</span>
+<span class="go">│   └── usage.md</span>
+<span class="go">├── makefile</span>
+<span class="go">├── mkdocs.yml</span>
+<span class="go">├── my_package</span>
+<span class="go">│   ├── __init__.py</span>
+<span class="go">│   ├── cli.py</span>
+<span class="go">│   └── my_package.py</span>
+<span class="go">├── pyproject.toml</span>
+<span class="go">├── setup.cfg</span>
+<span class="go">└── tests</span>
+<span class="go">    ├── __init__.py</span>
+<span class="go">    └── test_my_package.py</span>
 </code></pre></div>
 <p>Here the project_slug is <code>my-package</code>, when you generate yours, it could be other name.</p>
 <p>Also be noticed that there's <code>pyproject.toml</code> in this folder. This is the main configuration file of our project.</p>
@@ -736,17 +754,37 @@ As of this writing, the recommended way to install Poetry is with [pipx](</p>
 poetry isolated from the rest of your system by vendorizing its dependencies.
 This is the recommended way of installing poetry.</p>
 <h4 id="install-developer-requirements">Install developer requirements<a class="headerlink" href="#install-developer-requirements" title="Permanent link">&para;</a></h4>
-<p>You should still be in the folder named as <code>project_slug</code>, which containing the
+<p>You should still be in the folder named <code>project_slug</code>, which contains the
 <code>pyproject.toml</code> file.</p>
-<p>Install the new project's local development requirements with <code>poetry install</code>:</p>
+<p>It is a good idea to make a new virtual environment, although Poetry will also do this
+automatically for you in the next step. If you would like to do this manually, you can
+use the following command:</p>
+<div class="highlight"><pre><span></span><code>poetry<span class="w"> </span>env<span class="w"> </span>use<span class="w"> </span>&lt;path<span class="w"> </span>to<span class="w"> </span>Python<span class="w"> </span>interpreter&gt;
+</code></pre></div>
+<p>For instance, to use the Python 3.11 interpreter linked to the alias <code>python3.11</code>,
+you would run:</p>
+<div class="highlight"><pre><span></span><code>poetry<span class="w"> </span>env<span class="w"> </span>use<span class="w"> </span>python3.11
+</code></pre></div>
+<p>By default, this will create a virtual environment in the <code>.venv</code> folder in your project
+directory. To activate this virtual environment, run:</p>
+<div class="highlight"><pre><span></span><code><span class="nb">source</span><span class="w"> </span>.venv/bin/activate
+</code></pre></div>
+<p>or</p>
+<div class="highlight"><pre><span></span><code>poetry<span class="w"> </span>shell
+</code></pre></div>
+<p>With the environment active, install the new project's local development requirements
+with <code>poetry install</code>:</p>
 <div class="highlight"><pre><span></span><code>poetry<span class="w"> </span>install<span class="w"> </span>--with<span class="w"> </span>dev
-poetry<span class="w"> </span>run<span class="w"> </span>tox
 </code></pre></div>
 <p>Poetry will create its own virtualenv isolated from your system and install the dependencies in it.
-We installed extra dependency need by developer with the <code>--with dev</code> option, such as documentation build tools, lint,
-formatting and test tools etc.</p>
-<p>We also launch a test here by running <code>poetry run tox</code>. This will run <code>tox</code> within created virtual environment,
-give you a test report and lint report. You should see no errors except some lint warnings.</p>
+We installed extra dependency needed by developers with the <code>--with dev</code> option, such as
+documentation build tools, linting, formatting and test tools etc.</p>
+<h4 id="run-tests">Run tests<a class="headerlink" href="#run-tests" title="Permanent link">&para;</a></h4>
+<p>We also launch a test here by running <code>poetry run tox</code>. This will run <code>tox</code> within
+created virtual environment, give you a test report and lint report. You should see no
+errors except some lint warnings.</p>
+<div class="highlight"><pre><span></span><code>poetry<span class="w"> </span>run<span class="w"> </span>tox
+</code></pre></div>
 <p>If you found errors like the following during tox run:</p>
 <div class="highlight"><pre><span></span><code>ERROR: InterpreterNotFound: python3.9
 </code></pre></div>

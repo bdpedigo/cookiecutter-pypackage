@@ -829,12 +829,23 @@ Under "Workflow permissions", check the box for "Read and write permissions".</p
 <h4 id="initialize-documentation">Initialize documentation<a class="headerlink" href="#initialize-documentation" title="Permanent link">&para;</a></h4>
 <div class="highlight"><pre><span></span><code>mike deploy --push --update-aliases dev
 </code></pre></div>
+<p>This should be all that's required to set up GitHub Pages for your documentation.
+You can see if this worked by going to the "Settings" tab of your repo on GitHub and
+scrolling down to the "GitHub Pages" section. If everything worked, you should see a
+message that says "Your site is published at..." with a link to your documentation. It
+may take a few minutes for the link to work.</p>
+<p>At this point, all that has been build and served is the "dev" version of your
+documentation, so following the GitHub Pages link will not work. Instead, append
+<code>/dev</code> to the end of the URL to see the documentation. This version of the site will
+update automatically with each commit to <code>main</code>, <em>even if you haven't made a release</em>.
+Because this is unstable, it is not the default landing site for visitors to your docs.
+To view the stable version, we'll first need to make a release.</p>
 <h4 id="set-up-publishing">Set up publishing<a class="headerlink" href="#set-up-publishing" title="Permanent link">&para;</a></h4>
 <ul>
 <li>Go to PyPI</li>
 <li>Log in</li>
 <li>In your account, go to Publishing</li>
-<li>You may need to set up 2FA at this point  </li>
+<li>You may need to set up 2FA at this point</li>
 <li>Hit "Add a new pending publisher"</li>
 <li>Under GitHub, fill out the details of your package</li>
 <li>Use <code>release.yml</code> under "Workflow name"</li>
@@ -842,7 +853,7 @@ Under "Workflow permissions", check the box for "Read and write permissions".</p
 <li>If you make a commit on the repo, TestPyPI should automatically cut a pre-release version.</li>
 </ul>
 <h4 id="create-a-release">Create a release<a class="headerlink" href="#create-a-release" title="Permanent link">&para;</a></h4>
-<p>You can cut a release using the pre-made GitHub action. Go to the repo on GitHub, hit the "Actions" tab, and click "publish release." You should see a button on the top right that says "Run workflow." Uncheck "dry run" and run the workflow for a "patch" bump just to test things out.  </p>
+<p>You can cut a release using the pre-made GitHub action. Go to the repo on GitHub, hit the "Actions" tab, and click "publish release." You should see a button on the top right that says "Run workflow." Uncheck "dry run" and run the workflow for a "patch" bump just to test things out.</p>
 <!-- END INCLUDE -->
 
 

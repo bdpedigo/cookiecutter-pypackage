@@ -214,4 +214,16 @@ mike deploy --push --update-aliases dev
 
 ### Set up publishing
 
-TODO: add instructions for setting up PyPI and TestPyPI
+- Go to PyPI
+- Log in
+- In your account, go to Publishing
+   - You may need to set up 2FA at this point  
+- Hit "Add a new pending publisher"
+- Under GitHub, fill out the details of your package
+   - Use `release.yml` under "Workflow name"
+- If setting up TestPyPI, do all of the above again on TestPyPI, but use `test-release.yml` as the workflow.
+- If you make a commit on the repo, TestPyPI should automatically cut a pre-release version.
+
+### Create a release
+
+You can cut a release using the pre-made GitHub action. Go to the repo on GitHub, hit the "Actions" tab, and click "publish release." You should see a button on the top right that says "Run workflow." Uncheck "dry run" and run the workflow for a "patch" bump just to test things out.  

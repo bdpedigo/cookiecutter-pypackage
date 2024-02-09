@@ -203,7 +203,7 @@ remove it).
 
 ### Change GitHub settings
 
-*Maybe not needed by default*
+_Maybe not needed by default_
 
 On GitHub, go to your new repo and click on the "Settings" tab. Then click on "Actions" in the left sidebar.
 Under "Workflow permissions", check the box for "Read and write permissions".
@@ -214,18 +214,31 @@ Under "Workflow permissions", check the box for "Read and write permissions".
 mike deploy --push --update-aliases dev
 ```
 
+This should be all that's required to set up GitHub Pages for your documentation.
+You can see if this worked by going to the "Settings" tab of your repo on GitHub and
+scrolling down to the "GitHub Pages" section. If everything worked, you should see a
+message that says "Your site is published at..." with a link to your documentation. It
+may take a few minutes for the link to work.
+
+At this point, all that has been build and served is the "dev" version of your
+documentation, so following the GitHub Pages link will not work. Instead, append
+`/dev` to the end of the URL to see the documentation. This version of the site will
+update automatically with each commit to `main`, _even if you haven't made a release_.
+Because this is unstable, it is not the default landing site for visitors to your docs.
+To view the stable version, we'll first need to make a release.
+
 ### Set up publishing
 
 - Go to PyPI
 - Log in
 - In your account, go to Publishing
-   - You may need to set up 2FA at this point  
+  - You may need to set up 2FA at this point
 - Hit "Add a new pending publisher"
 - Under GitHub, fill out the details of your package
-   - Use `release.yml` under "Workflow name"
+  - Use `release.yml` under "Workflow name"
 - If setting up TestPyPI, do all of the above again on TestPyPI, but use `test-release.yml` as the workflow.
 - If you make a commit on the repo, TestPyPI should automatically cut a pre-release version.
 
 ### Create a release
 
-You can cut a release using the pre-made GitHub action. Go to the repo on GitHub, hit the "Actions" tab, and click "publish release." You should see a button on the top right that says "Run workflow." Uncheck "dry run" and run the workflow for a "patch" bump just to test things out.  
+You can cut a release using the pre-made GitHub action. Go to the repo on GitHub, hit the "Actions" tab, and click "publish release." You should see a button on the top right that says "Run workflow." Uncheck "dry run" and run the workflow for a "patch" bump just to test things out.

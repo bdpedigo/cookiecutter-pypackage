@@ -203,6 +203,8 @@ remove it).
 
 ### Change GitHub settings
 
+*Maybe not needed by default*
+
 On GitHub, go to your new repo and click on the "Settings" tab. Then click on "Actions" in the left sidebar.
 Under "Workflow permissions", check the box for "Read and write permissions".
 

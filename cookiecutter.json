@@ -7,7 +7,6 @@
   "email": "ben.pedigo@alleninstitute.org",
   "github_username": "bdpedigo",
   "version": "0.1.0",
-  "command_line_interface": ["Click", "No command-line interface"],
   "open_source_license": ["MIT", "BSD-3-Clause", "ISC", "Apache-2.0", "GPL-3.0-only", "Not open source"],
   "docstrings_style": ["google", "numpy", "pep257"],
   "use_mypy": "y",

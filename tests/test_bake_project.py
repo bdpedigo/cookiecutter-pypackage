@@ -2,7 +2,6 @@ import datetime
 import os
 import shlex
 import subprocess
-import sys
 from contextlib import contextmanager
 from typing import List
 
@@ -215,13 +214,6 @@ def test_docstrings_style(cookies):
 #         "missing password config in .travis.yml"
 
 
-@pytest.mark.parametrize(
-    "args",
-    [
-        ({"command_line_interface": "No command-line interface"}, False),
-        ({"command_line_interface": "click"}, True),
-    ],
-)
 def test_bake_with_no_console_script(cookies, args):
     context, is_present = args
     result = cookies.bake(extra_context=context)
@@ -232,17 +224,3 @@ def test_bake_with_no_console_script(cookies, args):
     pyproject_path = os.path.join(project_path, _DEPENDENCY_FILE)
     with open(pyproject_path, "r") as pyproject_file:
         assert ("[tool.poetry.scripts]" in pyproject_file.read()) == is_present
-
-
-def test_bake_with_console_script_cli(cookies):
-    context = {"command_line_interface": "click"}
-    result = cookies.bake(extra_context=context)
-    project_path, project_slug, project_dir = project_info(result)
-    module_path = os.path.join(project_dir, "cli.py")
-
-    out = execute([sys.executable, module_path], project_dir)
-    assert project_slug in out
-
-    out = execute([sys.executable, module_path, "--help"], project_dir)
-
-    assert "Show this message and exit." in out

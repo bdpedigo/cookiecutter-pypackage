@@ -1,6 +1,5 @@
 """Console script for {{cookiecutter.pkg_name}}."""
 
-{% if cookiecutter.command_line_interface|lower == 'click' -%}
 import click
 
 
@@ -14,4 +13,3 @@ def main():
 
 if __name__ == "__main__":
     main()  # pragma: no cover
-{%- endif %}

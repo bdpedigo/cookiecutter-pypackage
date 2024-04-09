@@ -15,7 +15,6 @@ This tool will create Python project with the following features:
 - [Ruff](https://docs.astral.sh/ruff/) for formatting, linting, and import sorting
   - Same functionality as [Black](https://github.com/psf/black), [Isort](https://github.com/PyCQA/isort) and [Flake8](https://flake8.pycqa.org) bundled together
 - Check static type with [Mypy](http://mypy-lang.org/) (optional)
-- [Pre-commit hooks](https://pre-commit.com/): Formatting/linting anytime when commit your code
 - [Mkdocstrings](https://mkdocstrings.github.io/): Auto API doc generation
 - Host your documentation from [GitHub Pages](https://pages.github.com) with zero-config
 - Continuous Integration/Deployment by [GitHub actions](https://github.com/features/actions), includes:

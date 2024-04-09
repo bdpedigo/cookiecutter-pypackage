@@ -1,6 +1,8 @@
+{% raw %}
 ---
 title: {{ names.package }}
 ---
+{% endraw %}
 
 {% if is_open_source %}
 [![pypi](https://img.shields.io/pypi/v/{{ cookiecutter.project_slug }}.svg)](https://pypi.org/project/{{ cookiecutter.project_slug }}/)
